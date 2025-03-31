@@ -10,9 +10,18 @@
 <header>
 </header>
 
-<audio autoplay loop>
+<audio id="myAudio" autoplay muted loop>
     <source src="/lyd/old-mystery.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+window.onload = function() {
+    let audio = document.getElementById("myAudio");
+    audio.muted = false; // Removes the mute attribute and unmutes the audio
+    audio.play().catch(error => console.log("Autoplay blokeret:", error));
+};
+</script>
+
 
 
     <section class="parallax">
