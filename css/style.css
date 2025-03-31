@@ -168,7 +168,6 @@ html {
 .chapter p {
     font-size: 1.2em;
     color: #ddd;
-<<<<<<< Updated upstream
 }
 
 #regnestykke {
@@ -193,17 +192,3 @@ html {
     margin-top: 15px;
     font-weight: bold;
   }
-=======
-    z-index: 1;
-}
-
-.chapter img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    pointer-events: none;
-    z-index: 0;
-}
-
->>>>>>> Stashed changes
