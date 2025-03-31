@@ -8,8 +8,8 @@
 }
 
 body{
-    min-height: 100vh;
-    background: #706969;
+    background: #2c2b2b;
+
 }
 
 header{
@@ -50,7 +50,7 @@ header{
 
 #text{
     position: absolute;
-    font-size: 5em;
+    font-size: 7em;
     color: #ffff;
     text-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -58,7 +58,7 @@ header{
 
 .content{
     position: relative;
-    background-color: #706969;
+    background: #2c2b2b;
     width: 100%;
 }
 
@@ -70,20 +70,6 @@ header{
     text-align: center;
 }
 
-.content h4 {
-    font-size: 2em;
-    color: white;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.content p{
-    font-size: 1em;
-    color: white;
-    font-weight: 300;
-    margin: 10px;
-    text-align: center;
-}
 
 
 .popup {
@@ -150,35 +136,62 @@ html {
     opacity: 1;
 }
 
-.chapter {
-    position: relative;
-    padding: 40px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.chapter {  
+        height: 100vh; /* Gør hver sektion lige så høj som skærmen */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: background 1s ease-in-out;
+        position: relative;
+    }
+
+#chapter1 { 
+    background: url('/img/chapter1.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+#chapter2 { background: url('/img/chapter2.jpg') center/cover no-repeat; }
+#chapter3 { background: url('/img/chapter3.jpg') center/cover no-repeat; }
+#chapter4 { background: url('/img/chapter4.jpg') center/cover no-repeat; }
+#chapter5 { background: url('/img/chapter5.jpg') center/cover no-repeat; }
+
+.chapter p{
     color: white;
-    overflow: hidden;
-    transition: opacity 1s ease-out;
-    opacity: 0;
-}
-
-
-.chapter p {
-    font-size: 1.2em;
+    font-size: 1.5rem;
+    opacity: 0;  /* Skjult som standard */
+    transform: translateY(50px); /* Flyt ned for en flot fade-in */
+    transition: opacity 2s ease-in, transform 2s ease-in;
     color: #ddd;
+    font-weight: 300;
+    width: 80%;
+    line-height: 3;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px;
 }
+
+.chapter h2 {
+    font-size: 5rem;
+}
+
+
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
 
 
 #regnestykke {
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 5rem;
 }
 
 #svarInput {
     padding: 10px;
     font-size: 16px;
-    width: 250px;
+    width: 475px;
     margin-right: 10px;
 }
 
@@ -186,6 +199,8 @@ html {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    background-color: red;
+    color: white;
 }
 
 #feedback {
@@ -214,7 +229,7 @@ html {
     border-radius: 8px;
     text-align: center;
     width: 80%;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 /* Hide popup by default */
@@ -231,10 +246,11 @@ html {
     border-radius: 5px;
     color: white;
     margin-bottom: 2rem;
+    font-size: 1.2rem;
 }
 
 .popupAnswer p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: red;
     margin-top: 1rem;
 }
@@ -247,6 +263,18 @@ html {
 }
 
 .answer {
-    margin-bottom: 2rem;
+    height: 400px;
 }
 
+#regnestykke h2 {
+    margin-top: 5rem;
+    font-size: 4rem;
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#regnestykke h2 p {
+    color: red;
+}

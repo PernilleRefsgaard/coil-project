@@ -1,30 +1,5 @@
 "use strict";
 
-
-let text = document.getElementById("text");
-
-window.addEventListener("scroll", () => {
-    let value = window.scrollY;
-
-    text.style.marginTop = `${value*2.5}px`
-
-    tree4.style.left = `${value*-3}px`
-
-    tree.style.left = `${value*-3.5}px`
-
-    hill1.style.top = `${value*1}px`
-
-    hill2.style.right = `${value*1}px`
-
-    hill2.style.right = `${value*1}px`
-
-    hill4.style.left = `${value*-1.5}px`
-
-    hill5.style.left = `${value*1.5}px`
-
-    leaf.style.top = `${value*-1.5}px`
-})
-
 document.addEventListener("DOMContentLoaded", function () {
     const popup = document.getElementById("popup");
     const closePopup = document.getElementById("closePopup");
@@ -58,16 +33,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-let chapters = document.querySelectorAll('.chapter');
+document.addEventListener("DOMContentLoaded", function () {
+    const chapters = document.querySelectorAll('.chapter'); // Korrekt variabelnavn
 
-window.addEventListener('scroll', function () {
-    chapters.forEach(chapter => {
-        const rect = chapter.getBoundingClientRect();
-        if (rect.top <= window.innerHeight * 0.75) {
-            chapter.classList.add('visible');
-        }
+    window.addEventListener('scroll', function () {
+        chapters.forEach(chapter => {  // Brug `chapters` i stedet for `sections`
+            const rect = chapter.getBoundingClientRect();
+            const text = chapter.querySelector('.fade-text'); // Finder teksten i hver sektion
+
+            if (text && rect.top <= window.innerHeight * 0.75 && rect.bottom >= 0) {
+                text.classList.add('fade-in'); // Tilføjer fade-in klassen, hvis betingelsen er opfyldt
+            }
+        });
     });
 });
+
+
 
 // Modal logic
 const correctAnswerPopup = document.getElementById("correctAnswerPopup");
@@ -81,7 +62,7 @@ document.getElementById("tjekSvar").addEventListener("click", function () {
         feedback.textContent = "✅ Right answer!";
         feedback.style.color = "green";
         
-        // Show the modal instead of alert
+        // Show the modal 
         correctAnswerPopup.classList.remove("hiddenAnswer");
     } else {
         feedback.textContent = "❌ Wrong Try again!";
