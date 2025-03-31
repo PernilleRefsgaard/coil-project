@@ -73,25 +73,27 @@
         a scandalous affair—every guest had a reason to want Sir James dead.</p>
         </section>
 
+        <section class="answer">
         <div id="regnestykke">
             <h2>Who is the murder?</h2>
             <input type="number" id="svarInput" placeholder="Write your answer" />
             <button id="tjekSvar">See Answer</button>
             <p id="feedback"></p>
         </div>
-        
-        <div id="correctAnswerPopup" class="popupAnswer hiddenAnswer">
-            <div class="popupAswer-content">
-                <h2>The murder is VICTOR!</h2>
-                <p>Victor murdered Sir James after discovering he was involved in a shady art deal that threatened Victor's reputation. James had used Victor’s name to cover the deal, a betrayal he couldn't forgive. The power outage gave Victor the perfect opportunity to poison James' wine. By the time the lights returned, James was dead, and Victor's secret was safe.</p>
-                <button id="closePopupAswer">Close</button>
+            
+            <!-- Modal popup -->
+            <div id="correctAnswerPopup" class="popupAnswer hiddenAnswer">
+                <div class="popupAswer-content">
+                    <h2>The murder is VICTOR!</h2>
+                    <p>Victor murdered Sir James after discovering he was involved in a shady art deal that threatened Victor's reputation. James had used Victor’s name to cover the deal, a betrayal he couldn't forgive. The power outage gave Victor the perfect opportunity to poison James' wine. By the time the lights returned, James was dead, and Victor's secret was safe.</p>
+                    <button id="closePopupAswer">Close</button>
+                </div>
             </div>
         </div>
         
     </section>
 
     <script src="js/script.js"></script>
-
 
 </body>
 </html>
