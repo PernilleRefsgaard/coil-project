@@ -85,18 +85,6 @@ header{
     text-align: center;
 }
 
-#tree{
-    width: 1000px;
-    opacity: 0.85px;
-    top: 95px;
-    margin-left: 338px;
-}
-
-#tree4{
-    width: 900px;
-    opacity: 0.9px;
-    top: 190px;
-}
 
 .popup {
     display: flex;
@@ -164,9 +152,7 @@ html {
 
 .chapter {
     position: relative;
-    width: 100vw;
     padding: 40px;
-    height: 100vh;
     align-items: center;
     justify-content: center;
     text-align: center;
