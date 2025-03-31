@@ -10,37 +10,33 @@
 <header>
 </header>
 
-<audio id="myAudio" autoplay muted loop>
-    <source src="/lyd/old-mystery.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-window.onload = function() {
-    let audio = document.getElementById("myAudio");
-    audio.muted = false; // Removes the mute attribute and unmutes the audio
-    audio.play().catch(error => console.log("Autoplay blokeret:", error));
-};
-</script>
-
-
-
     <section class="parallax">
         <img src="/img/baggrund.webp" id="hill1" alt="hill 1">
         <h2 id="text">Solve the murder</h2>
 
     </section>
 
-    <div id="popup" class="popup" >
+    <div id="popup" class="popup">
         <div class="popup-content">
             <h2>How to play</h2>
             <p>To solve the murder, you must read the story below. Throughout the story, you will be presented with 
                 five numbers hidden within the text. Your task is to find these five numbers and then solve the equation. 
                 If your answer is correct, the guilty murderer will be revealed, but if you are wrong, you have lost the 
                 challenge.</p>
-           
-            <button id="closePopup">Understood</button>
+            
+            <button id="closePopup">
+                <p id="closePopupBtn"> Understood</p>
+            </button>
+            <button id="playSound">
+                <img id="playImg" src="/img/play.png" alt="">
+            </button> 
+    
+            <audio id="myAudio">
+                <source src="/lyd/old-mystery.mp3" type="audio/mpeg">
+            </audio>
         </div>
     </div>
+    
 
     <section class="content">
         <section class="chapter" id="chapter1">
@@ -87,6 +83,7 @@ window.onload = function() {
 
 
     </section>
+
     <script src="js/script.js"></script>
 
 

@@ -25,6 +25,10 @@ header{
     z-index: 100;
 }
 
+#playImg  {
+    width: 20px;
+}
+
 
 .parallax{
     position:relative;
@@ -123,9 +127,13 @@ header{
     padding: 10px 20px;
     border: none;
     background-color:red;
-    color: white;
     cursor: pointer;
     border-radius: 5px;
+}
+
+#closePopupBtn {
+    font-size: 1.1rem;
+    color: white;
 }
 
 .popup button:hover {

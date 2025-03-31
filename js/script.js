@@ -1,5 +1,6 @@
 "use strict";
 
+
 let text = document.getElementById("text");
 let leaf = document.getElementById("leaf");
 let hill1 = document.getElementById("hill1");
@@ -33,19 +34,37 @@ window.addEventListener("scroll", () => {
 })
 
 document.addEventListener("DOMContentLoaded", function () {
-  const popup = document.getElementById("popup");
-  const closePopup = document.getElementById("closePopup");
+    const popup = document.getElementById("popup");
+    const closePopup = document.getElementById("closePopup");
+    const playSound = document.getElementById("playSound");
+    const audio = document.getElementById("myAudio");
 
-  popup.classList.add("hidden");
+    // hides pop-up on load
+    popup.classList.add("hidden");
 
-  setTimeout(() => {
-      popup.classList.remove("hidden");
-  }, 2000);
+    // Shows pop-up after 2 seconds
+    setTimeout(() => {
+        popup.classList.remove("hidden");
+    }, 2000);
 
-  closePopup.addEventListener("click", function () {
-      popup.classList.add("hidden");
-  });
+    // closes pop-up
+    closePopup.addEventListener("click", function () {
+        popup.classList.add("hidden");
+    });
+
+    // play and pause sound
+    playSound.addEventListener("click", function () {
+        if (audio.paused) {
+            audio.play();
+            playSound.innerHTML = '<img src="/img/pause.png" alt="Pause" width="20">';
+        } else {
+            audio.pause();
+            playSound.innerHTML = '<img src="/img/play.png" alt="Play" width="20">';
+        }
+    });
+    
 });
+
 
 let chapters = document.querySelectorAll('.chapter');
 
