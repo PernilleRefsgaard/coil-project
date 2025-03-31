@@ -136,3 +136,33 @@ header{
     visibility: hidden;
     opacity: 0;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+}
+
+.chapter.visible {
+    opacity: 1;
+}
+
+.chapter {
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 800px;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.chapter p {
+    font-size: 1.2em;
+    color: #ddd;
+}

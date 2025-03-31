@@ -46,3 +46,14 @@ document.addEventListener("DOMContentLoaded", function () {
       popup.classList.add("hidden");
   });
 });
+
+let chapters = document.querySelectorAll('.chapter');
+
+        window.addEventListener('scroll', function () {
+            chapters.forEach(chapter => {
+                const rect = chapter.getBoundingClientRect();
+                if (rect.top <= window.innerHeight * 0.75) {
+                    chapter.classList.add('visible');
+                }
+            });
+        });
