@@ -76,6 +76,8 @@ let chapters = document.querySelectorAll('.chapter');
                 }
             });
         });
+
+        
         document.getElementById("tjekSvar").addEventListener("click", function () {
             const userInput = document.getElementById("svarInput").value;
             const feedback = document.getElementById("feedback");

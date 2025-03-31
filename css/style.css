@@ -59,7 +59,7 @@ header{
 .content{
     position: relative;
     background-color: #706969;
-    padding: 100px;
+    width: 100%;
 }
 
 
@@ -163,20 +163,25 @@ html {
 }
 
 .chapter {
+    position: relative;
+    width: 100vw;
     padding: 40px;
-    margin: 0 auto;
-    max-width: 800px;
-    opacity: 0;
-    transition: opacity 1s ease-out;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     color: white;
     overflow: hidden;
-    
+    transition: opacity 1s ease-out;
+    opacity: 0;
 }
+
 
 .chapter p {
     font-size: 1.2em;
     color: #ddd;
 }
+
 
 #regnestykke {
     text-align: center;
