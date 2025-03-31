@@ -166,3 +166,26 @@ html {
     font-size: 1.2em;
     color: #ddd;
 }
+
+#regnestykke {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  #svarInput {
+    padding: 10px;
+    font-size: 16px;
+    width: 150px;
+    margin-right: 10px;
+  }
+  
+  #tjekSvar {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #feedback {
+    margin-top: 15px;
+    font-weight: bold;
+  }

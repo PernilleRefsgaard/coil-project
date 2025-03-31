@@ -57,3 +57,15 @@ let chapters = document.querySelectorAll('.chapter');
                 }
             });
         });
+        document.getElementById("tjekSvar").addEventListener("click", function () {
+            const userInput = document.getElementById("svarInput").value;
+            const feedback = document.getElementById("feedback");
+          
+            if (userInput == 4) {
+              feedback.textContent = "✅ Right answer!";
+              feedback.style.color = "green";
+            } else {
+              feedback.textContent = "❌ Wrong Try agian!";
+              feedback.style.color = "red";
+            }
+          });
