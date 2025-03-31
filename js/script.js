@@ -60,25 +60,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let chapters = document.querySelectorAll('.chapter');
 
-        window.addEventListener('scroll', function () {
-            chapters.forEach(chapter => {
-                const rect = chapter.getBoundingClientRect();
-                if (rect.top <= window.innerHeight * 0.75) {
-                    chapter.classList.add('visible');
-                }
-            });
-        });
+window.addEventListener('scroll', function () {
+    chapters.forEach(chapter => {
+        const rect = chapter.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.75) {
+            chapter.classList.add('visible');
+        }
+    });
+});
 
+// Modal logic
+const correctAnswerPopup = document.getElementById("correctAnswerPopup");
+const closePopup = document.getElementById("closePopupAswer");  // Corrected id
+
+document.getElementById("tjekSvar").addEventListener("click", function () {
+    const userInput = document.getElementById("svarInput").value;
+    const feedback = document.getElementById("feedback");
+
+    if (userInput == 4) {
+        feedback.textContent = "✅ Right answer!";
+        feedback.style.color = "green";
         
-        document.getElementById("tjekSvar").addEventListener("click", function () {
-            const userInput = document.getElementById("svarInput").value;
-            const feedback = document.getElementById("feedback");
-          
-            if (userInput == 4) {
-              feedback.textContent = "✅ Right answer!";
-              feedback.style.color = "green";
-            } else {
-              feedback.textContent = "❌ Wrong Try agian!";
-              feedback.style.color = "red";
-            }
-          });
+        // Show the modal instead of alert
+        correctAnswerPopup.classList.remove("hiddenAnswer");
+    } else {
+        feedback.textContent = "❌ Wrong Try again!";
+        feedback.style.color = "red";
+    }
+});
+
+// Close the modal when the "Close" button is clicked
+closePopup.addEventListener("click", function () {
+    correctAnswerPopup.classList.add("hiddenAnswer");
+});
+
